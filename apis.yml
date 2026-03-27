@@ -1,0 +1,33 @@
+aid: huginn
+name: Huginn
+description: >-
+  Huginn is an open source system for building agents that perform automated tasks and workflow automation.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Workflow Automation
+  - Self-Hosted
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/huginn/refs/heads/main/apis.yml
+created: 2026-03-27
+modified: 2026-03-27
+specificationVersion: 0.19
+apis:
+  - aid: huginn:huginn
+    name: Huginn
+    description: >-
+      Huginn is an open source system for building agents that perform automated tasks and workflow automation.
+    humanURL: https://github.com/huginn/huginn
+    tags:
+      - Workflow Automation
+    properties:
+      - type: Documentation
+        url: https://github.com/huginn/huginn/wiki
+common:
+  - type: Website
+    url: https://github.com/huginn/huginn
+  - type: Documentation
+    url: https://github.com/huginn/huginn/wiki
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

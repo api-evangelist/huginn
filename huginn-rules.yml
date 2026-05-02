@@ -1,0 +1,86 @@
+aid: huginn
+name: Huginn Rules
+description: >-
+  Operational rules and guardrails for working with Huginn, the open-source
+  self-hosted agent platform. Codifies operator responsibility, secret
+  handling, agent execution safety, and outbound request etiquette for
+  agents and integrations.
+modified: '2026-04-28'
+rules:
+  - id: huginn-self-hosted-scope
+    name: Self-Hosted Scope
+    description: >-
+      Huginn is self-hosted. There is no central Huginn API, only the API
+      exposed by the operator's own installed instance. Never assume a
+      hosted endpoint and always require an instance base URL from the user.
+    applies_to:
+      - huginn:huginn-platform
+      - huginn:huginn-web-requests-api
+    severity: required
+  - id: huginn-webhook-secret
+    name: Webhook Path Secrets
+    description: >-
+      Huginn Web Requests endpoints use a per-agent secret embedded in the
+      URL path. Treat the full webhook URL as a credential, never log it,
+      and rotate the secret if exposure is suspected.
+    applies_to:
+      - huginn:huginn-web-requests-api
+    severity: required
+  - id: huginn-credential-storage
+    name: Use the Credentials Store
+    description: >-
+      Tokens, passwords, and API keys consumed by agents must be stored in
+      the Huginn Credentials store and referenced via Liquid templating.
+      Inline secrets in agent configuration JSON are forbidden.
+    applies_to:
+      - huginn:huginn-platform
+    severity: required
+  - id: huginn-shell-agent-trust
+    name: Shell Command Agent Trust
+    description: >-
+      The Shell Command Agent executes arbitrary commands on the host. It
+      must remain disabled in multi-user instances and may only be enabled
+      by the operator with explicit user confirmation per command.
+    applies_to:
+      - huginn:huginn-platform
+    severity: required
+  - id: huginn-javascript-agent-trust
+    name: JavaScript Agent Trust
+    description: >-
+      The JavaScript Agent runs user-supplied code inside the Huginn
+      process. Treat agent code as production code: review, version, and
+      avoid pulling unverified scripts.
+    applies_to:
+      - huginn:huginn-platform
+    severity: required
+  - id: huginn-destructive-confirm
+    name: Confirm Destructive Actions
+    description: >-
+      Deleting agents, scenarios, events, or users in a Huginn instance
+      can disrupt running automations and destroy event history. Require
+      explicit user confirmation before issuing DELETE actions.
+    applies_to:
+      - huginn:huginn-platform
+    severity: required
+  - id: huginn-outbound-etiquette
+    name: Outbound Request Etiquette
+    description: >-
+      Website Agent, RSS Agent, and HTTP-driven agents make outbound
+      requests on behalf of operators. Honor robots.txt, set a contact
+      User-Agent, and use polite scheduling (avoid sub-minute polling on
+      third-party sites).
+    applies_to:
+      - huginn:huginn-platform
+    severity: recommended
+  - id: huginn-event-retention
+    name: Event Retention Hygiene
+    description: >-
+      Events accumulate per agent and consume database storage. Configure
+      `keep_events_for` per agent and avoid disabling cleanup on
+      high-volume agents.
+    applies_to:
+      - huginn:huginn-platform
+    severity: recommended
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

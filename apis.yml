@@ -35,7 +35,7 @@ apis:
     properties:
       - type: Documentation
         url: https://github.com/huginn/huginn/wiki
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/huginn/huginn
       - type: Installation Guide
         url: https://github.com/huginn/huginn/blob/master/doc/manual/installation.md
@@ -63,7 +63,7 @@ common:
     url: https://github.com/huginn/huginn
   - type: Documentation
     url: https://github.com/huginn/huginn/wiki
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/huginn/huginn
   - type: License
     url: https://github.com/huginn/huginn/blob/master/LICENSE

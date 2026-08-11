@@ -71,6 +71,8 @@ apis:
       - type: Webhook Agent
         url: https://github.com/huginn/huginn/blob/master/app/models/agents/webhook_agent.rb
 common:
+  - type: Releases
+    url: https://github.com/huginn/huginn/releases
   - type: Website
     url: https://github.com/huginn/huginn
   - type: Documentation

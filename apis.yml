@@ -23,6 +23,12 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/huginn.png
 tags:
   - Agents
   - Automation
+  - Open-Source
+  - Self-Hosted
+  - Workflow-Automation
+tags_raw:
+  - Agents
+  - Automation
   - Open Source
   - Self-Hosted
   - Workflow Automation
@@ -41,6 +47,10 @@ apis:
       across the web.
     humanURL: https://github.com/huginn/huginn
     tags:
+      - Agents
+      - Self-Hosted
+      - Workflow-Automation
+    tags_raw:
       - Agents
       - Self-Hosted
       - Workflow Automation
@@ -63,6 +73,9 @@ apis:
       surface for Huginn.
     humanURL: https://github.com/huginn/huginn/wiki
     tags:
+      - Agents
+      - Webhook
+    tags_raw:
       - Agents
       - Webhooks
     properties:

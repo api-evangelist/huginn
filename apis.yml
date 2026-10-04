@@ -8,15 +8,20 @@ description: >-
   scenarios and post events into the platform.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: self-hosted
+  license: MIT
+  license_evidence:
+    repo: huginn/huginn
+    spdx: MIT
+    stars: 49991
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -34,15 +39,17 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/huginn.png
 tags:
   - Agents
   - Automation
-  - Open-Source
+  - Open Source
   - Self-Hosted
-  - Workflow-Automation
+  - Workflow Automation
 tags_raw:
   - Agents
   - Automation
   - Open Source
   - Self-Hosted
   - Workflow Automation
+  - Open-Source
+  - Workflow-Automation
 url: >-
   https://raw.githubusercontent.com/api-evangelist/huginn/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -60,11 +67,12 @@ apis:
     tags:
       - Agents
       - Self-Hosted
-      - Workflow-Automation
+      - Workflow Automation
     tags_raw:
       - Agents
       - Self-Hosted
       - Workflow Automation
+      - Workflow-Automation
     properties:
       - type: Documentation
         url: https://github.com/huginn/huginn/wiki

@@ -1,4 +1,4 @@
-# Huginn (huginn)
+# Huginn
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,95 @@
 
 Huginn is an open-source system for building agents that perform automated tasks online. Self-hosted agents can monitor the web, send and receive events, and trigger workflows. Each Huginn instance exposes a JSON-based HTTP interface (the Web Requests API) that lets external systems trigger scenarios and post events into the platform.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/huginn/refs/heads/main/apis.yml)
+**Areas:** Agents · Automation · Open Source · Self-Hosted · Workflow Automation
 
-## Scope
+## Huginn on APIs.io
 
-- **Type:** Index
-- **Position:** Self-Hosted
-- **Access:** Open Source
+Everything profiled for Huginn is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/huginn/](https://apis.io/providers/huginn/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (2)
 
- - Agents, Automation, Workflow Automation, Self-Hosted, Open Source
+- [Huginn Platform](https://apis.io/apis/huginn/huginn-platform/) — The Huginn platform is a self-hosted Ruby on Rails application that orchestrates agents, scenarios, and events. Operators install and run their own instance…
+- [Huginn Web Requests API](https://apis.io/apis/huginn/huginn-web-requests-api/) — Each Huginn instance exposes a Web Requests endpoint that lets external systems POST or GET events into a configured Webhook Agent. The endpoint lives at…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Plans and pricing (1)
 
-### Huginn Platform
-The Huginn platform is a self-hosted Ruby on Rails application that orchestrates agents, scenarios, and events. Operators install and run their own instance and configure agents to consume and produce events across the web.
+Published plans, tiers and prices.
 
-**Human URL:** [https://github.com/huginn/huginn](https://github.com/huginn/huginn)
+- [Huginn Plans Pricing](https://apis.io/plans/huginn/huginn-plans-pricing/)
 
-#### Tags:
+#### Rate limits (1)
 
- - Agents, Self-Hosted, Workflow Automation
+Published request limits.
 
-#### Properties
+- [Huginn Rate Limits](https://apis.io/rate-limits/huginn/huginn-rate-limits/)
 
-- [Documentation](https://github.com/huginn/huginn/wiki)
-- [GitHub Repository](https://github.com/huginn/huginn)
-- [Installation Guide](https://github.com/huginn/huginn/blob/master/doc/manual/installation.md)
-- [Docker](https://hub.docker.com/r/huginn/huginn)
+#### FinOps (1)
 
-### Huginn Web Requests API
-Each Huginn instance exposes a Web Requests endpoint that lets external systems POST or GET events into a configured Webhook Agent. The endpoint lives at `/users/{user_id}/web_requests/{agent_id}/{secret}` on the operator's installed instance and is the primary inbound integration surface for Huginn.
+What the API costs to run, by operation.
 
-**Human URL:** [https://github.com/huginn/huginn/wiki](https://github.com/huginn/huginn/wiki)
+- [Huginn Finops](https://apis.io/finops/huginn/huginn-finops/)
 
-#### Tags:
+## Where to find this API
 
- - Agents, Webhooks
-
-#### Properties
-
-- [Documentation](https://github.com/huginn/huginn/wiki)
-- [Webhook Agent](https://github.com/huginn/huginn/blob/master/app/models/agents/webhook_agent.rb)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://github.com/huginn/huginn)
 - [Documentation](https://github.com/huginn/huginn/wiki)
-- [GitHub Repository](https://github.com/huginn/huginn)
-- [License](https://github.com/huginn/huginn/blob/master/LICENSE)
-- [Issues](https://github.com/huginn/huginn/issues)
-- [Rules](https://raw.githubusercontent.com/api-evangelist/huginn/refs/heads/main/huginn-rules.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 10.7** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 0.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/huginn/](https://apis.io/providers/huginn/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Huginn: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/huginn/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
